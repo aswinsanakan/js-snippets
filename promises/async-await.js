@@ -12,4 +12,4 @@ export default function to(promise) {
 
 // Import the wrapper and use it on `await` 
 [err, user] = await to(UserModel.findById(1));
-
+if(err) throw new Error('No user found');
